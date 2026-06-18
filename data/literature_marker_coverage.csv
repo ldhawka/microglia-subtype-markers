@@ -1,0 +1,25 @@
+umbrella,sub,status,n_up,up_found,up_frac,n_down,down_found,up_missing
+Homeostatic / Surveillant,Homeostatic,updated,19,10,0.53,7,6,FCRLS; TGFBR1; ITGB5; SPARC; GPR34; SIGLECH; OLFML3; P2RY13; ADGRB1
+Homeostatic / Surveillant,Homeostatic-GRID2+,updated,18,17,0.94,4,4,RALGAPA2
+Homeostatic / Surveillant,Pre-activated,updated,17,17,1.0,3,3,
+Disease-Associated (DAM / activation continuum),Inflammatory DAM,updated,20,14,0.7,6,5,LGALS3; CST7; TYROBP; CD63; LAG3; CD68
+Disease-Associated (DAM / activation continuum),Lipid DAM / Lipid-droplet-accumulating microglia,updated,21,9,0.43,2,2,LGALS3; FABP5; LILRB4; CCL15; ANXA5; PLD3; CD36; FABP4; NPC1; NPC2; PLIN2; APOC1
+Disease-Associated (DAM / activation continuum),Activated Response Microglia (ARM),updated,13,6,0.46,3,3,HLA-DRB1; HLA-DRB5; DKK2; TYROBP; LGALS3; CST7; CTSS
+Disease-Associated (DAM / activation continuum),Advanced DAM (S100+),updated,14,4,0.29,5,3,HLA-DRB1; HLA-DRB5; S100A6; S100A8; S100A9; CCL15; LGALS3; CD63; CYBB; TYROBP
+Disease-Associated (DAM / activation continuum),Human MG-AD / GPNMB+ DAM-like state,NEW,16,9,0.56,3,3,APOC1; NUPR1; CTSB; CTSD; GRN; ASAH1; CD63
+Disease-Associated (DAM / activation continuum),ALS/FTLD cortical disease-associated microglia,NEW,14,9,0.64,4,4,CD68; APOC1; CD63; MS4A6A; MS4A7
+Disease-Associated (DAM / activation continuum),Chronic-active MS rim microglia (MIMS-iron),NEW,12,8,0.67,3,3,APOC1; CD68; ACSL1; SLC11A1
+Disease-Associated (DAM / activation continuum),Transitional IFN-DAM,updated,16,4,0.25,3,3,ISG15; IFI44L; IRF9; IFITM3; ZBP1; CXCL10; MX1; OASL1; ISG20; IFIT1; IFIT2; IFIT3
+Disease-Associated (DAM / activation continuum),Axon Tract-associated Microglia (ATM) / White-matter-associated (WAM),updated,14,5,0.36,3,3,IGF1; LGALS3; CD68; FABP5; PLD3; CTSL; LILRB4; CD63; CTSB
+Disease-Associated (DAM / activation continuum),Neonatal CD11c+ / Proliferative-region-associated (PAM),updated,13,9,0.69,2,2,IGF1; LGALS3; CD68; FABP5
+Interferon-Responsive,Interferon-Responsive Microglia (IRM),updated,20,5,0.25,3,3,IFI27; IFITM3; CCL2; BST2; IFIT3; ISG15; IFI16; CXCL10; OASL2; RTP4; B2M; IRF9; IFIH1; IFIT1; ZBP1
+Antigen-Presenting (MHC-II / DC-like),MHC-II-high,updated,16,5,0.31,3,3,HLA-DRB1; HLA-DRB5; CIITA; B2M; CD86; CD40; NLRC5; TAP1; TAP2; PSMB8; PSMB9
+Antigen-Presenting (MHC-II / DC-like),Antigen-presenting / dendritic-like microglia (HLA-high II),NEW,11,3,0.27,2,2,HLA-DRB1; HLA-DPA1; CIITA; HLA-DQA1; LAMP3; CCR7; FLT3; ZBTB46
+Inflammatory / Monocyte-derived,Cytokine / Chemokine-enriched (CRM),NEW,10,5,0.5,3,3,CCL2; CXCL8; NFKBIA; CCL3L1; CCL4L2
+Inflammatory / Monocyte-derived,Disease-Inflammatory Macrophages (DIMs),updated,10,8,0.8,3,3,IRAK2; MCL1
+Proliferative,Proliferating / Cycling,updated,16,0,0.0,3,3,MKI67; TOP2A; CENPE; MCM5; BIRC5; CDK1; CCNB2; PCNA; AURKB; CENPF; PLK1; CDCA8; CDCA3; CDC20; CCNA2; CCNB1
+Border-Associated (BAM / CAM),Border-Associated Macrophages (BAMs),updated,12,4,0.33,3,3,MS4A7; FOLR2; STAB1; PF4; CBR1; CD209; CD163L1; CLEC10A
+Developmental,Embryonic / Early-postnatal Microglia,updated,13,7,0.54,3,3,FABP5; MCM5; CCND1; DAB2; MS4A7; FN1
+QC / Artifact-prone (use with caution),Ribosomal DAM 1,updated,20,11,0.55,3,3,DYNLL1; NDUFA4; MT-ATP6; RPS27; DLG2; RTN3; MT-ND1; RPL18A; RPS18
+QC / Artifact-prone (use with caution),Ribosomal DAM 2,updated,20,8,0.4,3,3,BDNF-AS; NACA; SLC27A4; APOO; SLC47A1; ZNF90; TXNRD1; XPO5; RPL19; TMSB10; UBA52; TOMM7
+QC / Artifact-prone (use with caution),Stress / heat-shock response microglia (HSP+),NEW,12,7,0.58,1,0,HSPA1B; HSPB1; HSPH1; BAG3; FOSB
