@@ -320,19 +320,5 @@
   "reference_dois": "10.1038/s41467-025-56124-1; 10.1016/j.immuni.2018.01.011",
   "changes_vs_baseline": "NEW: separates a strongly antigen-presenting / DC-like program (CIITA-high, LAMP3/CCR7) recurrent in human atlases from the classic MHC-II-high microglia state.",
   "status": "NEW"
- },
- {
-  "subtype": "Stress / heat-shock response microglia (HSP+)",
-  "alias": "HSP-MG / stress-MG",
-  "category": "Reactive (ex-vivo aware)",
-  "description": "Microglia with heat-shock/immediate-early stress signature",
-  "upregulated_genes_human": "HSPA1A, HSPA1B, HSPB1, DNAJB1, FOS, JUN, JUNB, EGR1, HSPH1, BAG3, FOSB, ATF3",
-  "downregulated_genes_human": "\u2014",
-  "protein_surface_markers": "No surface marker; HSP70 (I) by IHC/flow if validating. CAUTION: largely an ex-vivo dissociation/stress artifact",
-  "context": "Reactive stress signature; substantially attributable to tissue dissociation/processing \u2014 interpret with care",
-  "references": "Marsh et al. (2022), Nat Neurosci; Paolicelli et al. (2022), Neuron (nomenclature)",
-  "reference_dois": "10.1038/s41593-022-01022-8; 10.1016/j.neuron.2022.10.020",
-  "changes_vs_baseline": "NEW (with caveat): documented explicitly as a state that is frequently a dissociation artifact (Marsh 2022); included so users can recognize and exclude it rather than mis-annotate it as biology.",
-  "status": "NEW"
  }
 ]

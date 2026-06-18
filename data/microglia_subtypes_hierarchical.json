@@ -352,7 +352,7 @@
  {
   "umbrella": "QC / Artifact-prone (use with caution)",
   "umbrella_description": "States frequently attributable to ambient RNA or ex-vivo dissociation (ribosomal, immediate-early, heat-shock). Retained so users RECOGNIZE and EXCLUDE them \u2014 not recommended as biological annotations.",
-  "n_sub_subtypes": 3,
+  "n_sub_subtypes": 2,
   "sub_subtypes": [
    {
     "sub_subtype": "Ribosomal DAM 1",
@@ -381,20 +381,6 @@
     "references": "Martins-Ferreira et al. (2025), Nat Commun (HuMicA); Sun et al. (2023), Cell; Marsh et al. (2022), Nat Neurosci",
     "reference_dois": "10.1038/s41467-025-56124-1; 10.1016/j.cell.2023.08.037; 10.1038/s41593-022-01022-8",
     "changes_vs_baseline": "Refreshed to human symbols; noted ferritin (FTL/FTH1) component and same ambient-RNA QC caveat as Ribo.DAM1."
-   },
-   {
-    "sub_subtype": "Stress / heat-shock response microglia (HSP+)",
-    "alias": "HSP-MG / stress-MG",
-    "status": "NEW",
-    "upregulated_genes_human": "HSPA1A, HSPA1B, HSPB1, DNAJB1, FOS, JUN, JUNB, EGR1, HSPH1, BAG3, FOSB, ATF3",
-    "upregulated_genes_denoised": "",
-    "dissociation_genes_removed": "HSPA1A, HSPA1B, HSPB1, DNAJB1, FOS, JUN, JUNB, EGR1, HSPH1, BAG3, FOSB, ATF3",
-    "downregulated_genes_human": "\u2014",
-    "protein_surface_markers": "No surface marker; HSP70 (I) by IHC/flow if validating. CAUTION: largely an ex-vivo dissociation/stress artifact",
-    "context": "Reactive stress signature; substantially attributable to tissue dissociation/processing \u2014 interpret with care",
-    "references": "Marsh et al. (2022), Nat Neurosci; Paolicelli et al. (2022), Neuron (nomenclature)",
-    "reference_dois": "10.1038/s41593-022-01022-8; 10.1016/j.neuron.2022.10.020",
-    "changes_vs_baseline": "NEW (with caveat): documented explicitly as a state that is frequently a dissociation artifact (Marsh 2022); included so users can recognize and exclude it rather than mis-annotate it as biology."
    }
   ]
  }
