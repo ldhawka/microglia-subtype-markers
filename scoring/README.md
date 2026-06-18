@@ -1,6 +1,6 @@
 # microglia_scorer — auto-annotate microglia by the subtype atlas
 
-Validated scoring recipe (see ../ADVERSARIAL_REVIEW.md): score each **sub-state** signature
+Validated scoring recipe (see ../LITERATURE_VALIDATION.md): score each **sub-state** signature
 flat (mean z of denoised up-genes − mean z of down-genes), take argmax, roll up to the
 **umbrella**. ~73% family-level accuracy vs annotated ALS microglia. Family-level gene
 aggregation was tested and is worse — don't aggregate.

@@ -1,7 +1,7 @@
 """
 microglia_scorer.py — annotate microglia by the hierarchical subtype-marker atlas.
 
-Validated pipeline (see ADVERSARIAL_REVIEW.md): score each SUB-STATE signature flat
+Validated pipeline (see LITERATURE_VALIDATION.md): score each SUB-STATE signature flat
 (mean z of denoised up-genes minus mean z of down-genes), take the argmax, then roll up
 to the umbrella family. Reaches ~73% family-level accuracy vs annotated ALS microglia.
 Family aggregation (union/mean/max of member genes) was tested and performs WORSE — do

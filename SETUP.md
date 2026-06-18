@@ -43,7 +43,6 @@ Then do step 3 above (Settings → Pages → deploy from `main` / root).
 ├── .nojekyll                         # serve static files as-is on GitHub Pages
 ├── LICENSE                           # MIT (code); table cites primary sources
 ├── assets/
-│   └── microglia_subtype_markers_heatmap.png
 └── data/
     ├── microglia_subtypes_updated.csv     # full updated table
     ├── microglia_subtypes.json            # same data, powers the website
