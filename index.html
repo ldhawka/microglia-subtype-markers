@@ -65,8 +65,10 @@ homeostatic markers (<i>Fcrls, Siglech</i>) are restored on the mouse side. Inde
 <a href="https://github.com/CompCy-lab/microglia-aging-clock" target="_blank">CompCy-lab/microglia-aging-clock</a>.</div>
 </div></header>
 <div class="wrap">
-<div class="mapfig"><img src="assets/marker_map.png" alt="Microglia sub-state by marker map"/>
-<div class="mapcap">Sub-states grouped by umbrella family (left color bar). Green = up-regulated, red = down-regulated, ★ = newly added. Map uses human symbols.</div></div>
+<div class="mapfig" id="mapHuman"><img src="assets/marker_map.png" alt="Microglia sub-state by marker map (human)"/>
+<div class="mapcap">Human symbols. Sub-states grouped by umbrella family (left color bar). Green = up-regulated, red = down-regulated, ★ = newly added.</div></div>
+<div class="mapfig" id="mapMouse"><img src="assets/marker_map_mouse.png" alt="Microglia sub-state by marker map (mouse)"/>
+<div class="mapcap">Mouse symbols (same layout). The human-only CXCL8 has no mouse panel column.</div></div>
 <div class="controls">
 <input id="q" type="search" placeholder="Search families, sub-states, genes (TREM2, P2ry12, HLA-DR…)…" autofocus/>
 <span class="species-lab">Show:</span>
@@ -150,8 +152,14 @@ function render(){
  }).join('');
  statEl.textContent=`${nU} families · ${nS} sub-states`;
 }
+function syncMaps(){
+ const mh=document.getElementById('mapHuman'),mm=document.getElementById('mapMouse');
+ if(mh)mh.style.display=(SP==='mouse')?'none':'';
+ if(mm)mm.style.display=(SP==='human')?'none':'';
+}
 document.querySelectorAll('#species button').forEach(b=>b.onclick=()=>{
- SP=b.dataset.sp;document.querySelectorAll('#species button').forEach(x=>x.classList.remove('active'));b.classList.add('active');render();});
+ SP=b.dataset.sp;document.querySelectorAll('#species button').forEach(x=>x.classList.remove('active'));b.classList.add('active');syncMaps();render();});
+syncMaps();
 $('#expandAll').onclick=()=>{DATA.forEach(u=>u._c=false);render();};
 $('#collapseAll').onclick=()=>{DATA.forEach(u=>u._c=true);render();};
 qEl.addEventListener('input',render);

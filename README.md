@@ -10,11 +10,17 @@ A refreshed, **hierarchically organized** reference of microglia / CNS-myeloid m
 
 > **Species note:** Human symbols are the curated primary set (HGNC-validated). Mouse symbols are computationally mapped from the human set (title-case + a curated exceptions table for MHC, mitochondrial and one-to-many cases); mouse-only homeostatic markers (*Fcrls, Siglech*) with no human ortholog are restored on the mouse side. Orthology is not always 1:1 — a dash (—) means no clean counterpart in that species.
 
-## Marker map
+## Marker maps
 
-![Microglia sub-state × marker map](assets/marker_map.png)
+**Human symbols**
 
-*Sub-states grouped by umbrella family (left color bar). Green = up-regulated, red = down-regulated, ★ = newly added. Map uses human symbols; markers ordered by functional theme.*
+![Microglia sub-state × marker map (human)](assets/marker_map.png)
+
+**Mouse symbols**
+
+![Microglia sub-state × marker map (mouse)](assets/marker_map_mouse.png)
+
+*Same layout, both species. Sub-states grouped by umbrella family (left color bar). Green = up-regulated, red = down-regulated, ★ = newly added. Markers ordered by functional theme; the human-only CXCL8 has no mouse panel column.*
 
 ## Why hierarchical?
 
