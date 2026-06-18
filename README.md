@@ -1,0 +1,133 @@
+# Microglia Subtype Marker Atlas — Hierarchical (2025)
+
+A refreshed, **hierarchically organized** reference of microglia / CNS-myeloid markers: **9 umbrella families → 24 sub-states**, with human HUGO gene symbols, a curated **protein / surface-marker** column, **denoised** gene sets (dissociation artifacts removed), and DOI-linked references.
+
+> Independent update of the *Comprehensive Characterization of Major Microglia Subtypes* table from [CompCy-lab/microglia-aging-clock](https://github.com/CompCy-lab/microglia-aging-clock). Disease-associated states form a **continuum**, so they are grouped under one umbrella with sub-states beneath rather than listed as independent clusters.
+
+🔎 **Searchable, collapsible site:** [index.html](./index.html)  ·  🧪 **Validation:** [ADVERSARIAL_REVIEW.md](./ADVERSARIAL_REVIEW.md)
+
+## Why hierarchical?
+
+An adversarial check against annotated microglia in three ALS datasets showed the disease-associated signatures overlap heavily (max Jaccard 0.42) — they are a trajectory, not discrete types. Scoring per sub-state and rolling up to the umbrella reaches **73% family-level accuracy**; forcing a single winner among 10 overlapping DAM signatures does not. The structure below reflects that biology.
+
+![Ground-truth validation](assets/validation_groundtruth_heatmap.png)
+
+## The 9 umbrella families
+
+| Umbrella family | Sub-states | Notes |
+|---|---|---|
+| **Homeostatic / Surveillant** | 3 | Healthy-brain surveillant microglia and early-transition states. Core: P2RY12, CX3CR1, TMEM119, CSF1R. |
+| **Disease-Associated (DAM / activation continuum)** | 10 | A continuum of activated/disease-associated states (DAM/MGnD/ARM and human/disease-specific variants). They share TREM2/ |
+| **Interferon-Responsive** | 1 | Type-I IFN signature. Define by ISG transcripts (ISG15, IFITM3, IRF7, STAT1); BST2 surface. |
+| **Antigen-Presenting (MHC-II / DC-like)** | 2 | MHC class II / antigen presentation. HLA-DR, CD74, CIITA; DC-like fraction adds LAMP3/CCR7. |
+| **Inflammatory / Monocyte-derived** | 2 | Cytokine-releasing and monocyte-derived (DIM) cells. DIM is SALL1-neg/CCR2+ (monocyte origin), distinct from microglial  |
+| **Proliferative** | 1 | Cell-cycle microglia. Ki-67/TOP2A (intracellular). |
+| **Border-Associated (BAM / CAM)** | 1 | CNS-border macrophages (perivascular/meningeal/choroid). CD163/CD206/LYVE1 — NOT parenchymal microglia. |
+| **Developmental** | 1 | Embryonic/early-postnatal microglia (developmental context). |
+| **QC / Artifact-prone (use with caution)** | 3 | States frequently attributable to ambient RNA or ex-vivo dissociation (ribosomal, immediate-early, heat-shock). Retained |
+
+## Full hierarchical table
+
+### Homeostatic / Surveillant  (3 sub-states)
+
+*Healthy-brain surveillant microglia and early-transition states. Core: P2RY12, CX3CR1, TMEM119, CSF1R.*
+
+| Sub-state | Up-markers (denoised, human) | Protein / surface | Context | References |
+|---|---|---|---|---|
+| Homeostatic | P2RY12, CX3CR1, TMEM119, SALL1, FCRLS, HEXB, CSF1R, TGFBR1, MERTK, ITGB5, SPARC, GPR34, SIGLECH, OLFML3, SELPLG, P2RY13, ADGRB1, KBTBD12, RASGEF1C | P2RY12 (S), TMEM119 (S), CX3CR1 (S), CSF1R/CD115 (S), MERTK (S); SALL1 (I, nuclear TF) | Normal healthy brain; dominant in adult brain | [10.1016/j.immuni.2018.11.004](https://doi.org/10.1016/j.immuni.2018.11.004), [10.1038/s41586-019-0924-x](https://doi.org/10.1038/s41586-019-0924-x), [10.1038/nn.4597](https://doi.org/10.1038/nn.4597), [10.1016/j.neuron.2022.10.020](https://doi.org/10.1016/j.neuron.2022.10.020) |
+| Homeostatic-GRID2+ | GRID2, PRDM11, ADGRB3, SYNDIG1, DSCAM, MED12L, NAV2, RASGEF1C, TBC1D4, USP6NL, MAP4K4, DOCK10, RALGAPA2, TBC1D9, TBC1D12, EVI5, SNX13, RAP1GAP2 | P2RY12 (S), TMEM119 (S); GRID2 (S, glutamate receptor) — note: largely a snRNA/ambient signature, validate by IHC | Potential response to tau-bearing neurons; specialized homeostatic function | [10.1038/s41467-025-56124-1](https://doi.org/10.1038/s41467-025-56124-1), [10.1007/s00401-021-02263-w](https://doi.org/10.1007/s00401-021-02263-w) |
+| Pre-activated | P2RY12, CX3CR1, SERPINE1, PELI2, FOXP2, INPP5D, CARD11, ID2, NCKAP1L, CSF3R, PADI2, PREX1, TRPM2, SWAP70, GAB1, RGS1, CD83 | P2RY12 (S), CX3CR1 (S); CD83 (S, early activation) | Transition state between homeostasis and activation; response to subtle perturbations | [10.1038/s41467-025-56124-1](https://doi.org/10.1038/s41467-025-56124-1), [10.1038/s41593-022-01022-8](https://doi.org/10.1038/s41593-022-01022-8) |
+
+### Disease-Associated (DAM / activation continuum)  (10 sub-states)
+
+*A continuum of activated/disease-associated states (DAM/MGnD/ARM and human/disease-specific variants). They share TREM2/APOE/ITGAX/GPNMB and differ by sub-state-specific markers. NOT discrete clusters — a trajectory.*
+
+| Sub-state | Up-markers (denoised, human) | Protein / surface | Context | References |
+|---|---|---|---|---|
+| Inflammatory DAM | APOE, CLEC7A, ITGAX, LGALS3, SPP1, AXL, LPL, CST7, CD74, TYROBP, TREM2, CD9, CSF1, CD63, LAG3, CD68, CCL3, CCL4, TMEM163, HAMP | TREM2 (S), CD9 (S), ITGAX/CD11c (S), CLEC7A/Dectin-1 (S), CD63 (S/lysosomal), CD68 (I, lysosomal), GPNMB (S); SPP1/osteopontin (secreted) | Alzheimer's disease, amyloid pathology, neurodegeneration, aging | [10.1016/j.cell.2017.05.018](https://doi.org/10.1016/j.cell.2017.05.018), [10.1016/j.immuni.2017.08.008](https://doi.org/10.1016/j.immuni.2017.08.008), [10.1016/j.immuni.2018.11.004](https://doi.org/10.1016/j.immuni.2018.11.004), [10.1038/s41467-025-56124-1](https://doi.org/10.1038/s41467-025-56124-1), [10.1016/j.cell.2023.08.037](https://doi.org/10.1016/j.cell.2023.08.037) |
+| Lipid DAM / Lipid-droplet-accumulating microglia | GPNMB, LGALS3, FABP5, LGALS1, LILRB4, CCL15, ANXA5, PLD3, CD9, CD36, LPL, APOE, TREM2, FABP4, NPC1, NPC2, MSR1, PLIN2, APOC1, PPARG, MITF | GPNMB (S), CD9 (S), CD36 (S, scavenger), TREM2 (S), MSR1/CD204 (S); lipid droplets by BODIPY/PLIN2 (I) | Phagocytosis of myelin/lipid debris; expanded in aging, demyelination and AD; LDAM are a dysfunctional aging state | [10.1038/s41593-019-0566-1](https://doi.org/10.1038/s41593-019-0566-1), [10.1016/j.immuni.2018.11.004](https://doi.org/10.1016/j.immuni.2018.11.004), [10.1038/s41467-025-56124-1](https://doi.org/10.1038/s41467-025-56124-1) |
+| Activated Response Microglia (ARM) | HLA-DRB1, HLA-DRB5, CD74, DKK2, GPNMB, SPP1, APOE, TREM2, TYROBP, ITGAX, LGALS3, CST7, CTSS | TREM2 (S), ITGAX/CD11c (S), GPNMB (S), CD9 (S), HLA-DR/CD74 (S/MHC-II) | Activated in early stages of neurodegeneration; associated with AD risk genes | [10.1016/j.celrep.2019.03.099](https://doi.org/10.1016/j.celrep.2019.03.099), [10.15252/emmm.201910606](https://doi.org/10.15252/emmm.201910606) |
+| Advanced DAM (S100+) | HLA-DRB1, HLA-DRB5, CD74, S100A6, S100A8, S100A9, CCL15, LGALS3, CD63, ITGAX, CYBB, TREM2, APOE, TYROBP | TREM2 (S), ITGAX/CD11c (S), CD63 (S); S100A8/A9 alarmins (I/secreted), HLA-DR (S) | Advanced neurodegeneration; Late stage AD, chronic inflammation | [10.1016/j.celrep.2017.09.039](https://doi.org/10.1016/j.celrep.2017.09.039) |
+| Human MG-AD / GPNMB+ DAM-like state ★ | GPNMB, APOC1, APOE, TREM2, CD9, ITGAX, SPP1, MYO1E, PPARG, NUPR1, CTSB, CTSD, GRN, ASAH1, LPL, CD63 | GPNMB (S), TREM2 (S), CD9 (S), ITGAX/CD11c (S), CD68 (I) | Human Alzheimer's disease cortex; lipid/cholesterol handling; defines the disease end of the human activation trajectory | [10.1016/j.cell.2023.08.037](https://doi.org/10.1016/j.cell.2023.08.037), [10.1038/s43587-023-00424-y](https://doi.org/10.1038/s43587-023-00424-y), [10.1038/s41586-024-07871-6](https://doi.org/10.1038/s41586-024-07871-6), [10.1038/s41467-025-56124-1](https://doi.org/10.1038/s41467-025-56124-1) |
+| ALS/FTLD cortical disease-associated microglia ★ | CD68, SPP1, APOC1, APOE, FTL, GPNMB, LPL, CD63, MS4A6A, MS4A7, CD83, HLA-DRA, ITGAX, TREM2 | CD68 (I), HLA-DR (S), TREM2 (S), GPNMB (S), MS4A6A/MS4A7 (S) | ALS and FTLD motor & prefrontal cortex; reactive/phagocytic microglia expanded with TDP-43 pathology and C9orf72 status | [10.1016/j.cell.2024.02.031](https://doi.org/10.1016/j.cell.2024.02.031) |
+| Chronic-active MS rim microglia (MIMS-iron) ★ | FTL, FTH1, CD163, APOC1, APOE, GPNMB, MSR1, SPP1, CD68, ACSL1, NAMPT, SLC11A1 | FTL/ferritin (I, by IHC), CD163 (S), MSR1/CD204 (S), CD68 (I); paramagnetic iron rim on 7T MRI | Rim of chronic-active (smoldering) MS lesions; iron accumulation; drives lesion expansion and disability | [10.1038/s41586-021-03892-7](https://doi.org/10.1038/s41586-021-03892-7) |
+| Transitional IFN-DAM | ISG15, IFI44L, IRF9, IFITM3, IRF7, ZBP1, CXCL10, STAT1, MX1, OASL1, ISG20, IFIT1, IFIT2, IFIT3, APOE, TREM2 | TREM2 (S) + BST2 (S); transitional — defined transcriptionally (ISG + DAM) | Early phase of disease-associated transformation; transition state | [10.1016/j.celrep.2017.09.039](https://doi.org/10.1016/j.celrep.2017.09.039), [10.1016/j.cell.2023.08.037](https://doi.org/10.1016/j.cell.2023.08.037) |
+| Axon Tract-associated Microglia (ATM) / White-matter-associated (WAM) | ITGAX, IGF1, SPP1, GPNMB, LGALS3, CD68, CD9, FABP5, PLD3, CTSL, LGALS1, LILRB4, CD63, CTSB | CLEC7A (S), ITGAX/CD11c (S), CD9 (S), GPNMB (S), CD68 (I); TREM2-dependent | Developmental white matter (corpus callosum); aging white matter (WAM). TREM2-dependent, clear myelin debris | [10.1016/j.immuni.2018.11.004](https://doi.org/10.1016/j.immuni.2018.11.004), [10.1016/j.neuron.2021.01.027](https://doi.org/10.1016/j.neuron.2021.01.027) |
+| Neonatal CD11c+ / Proliferative-region-associated (PAM) | ITGAX, IGF1, SPP1, GPNMB, CLEC7A, TREM2, LGALS3, CD68, FABP5, LPL, CSF1, MRC1, CD74 | ITGAX/CD11c (S), CLEC7A (S), CD9 (S), TREM2 (S), GPNMB (S), SPP1 (secreted) | Early postnatal development (P1-P8); synaptic pruning, brain wiring | [10.15252/embj.201696056](https://doi.org/10.15252/embj.201696056), [10.3389/fimmu.2020.00430](https://doi.org/10.3389/fimmu.2020.00430) |
+
+### Interferon-Responsive  (1 sub-state)
+
+*Type-I IFN signature. Define by ISG transcripts (ISG15, IFITM3, IRF7, STAT1); BST2 surface.*
+
+| Sub-state | Up-markers (denoised, human) | Protein / surface | Context | References |
+|---|---|---|---|---|
+| Interferon-Responsive Microglia (IRM) | IFI27, IFITM3, CCL2, BST2, IFIT3, ISG15, IFI16, IRF7, CXCL10, OASL2, RTP4, B2M, STAT1, IRF9, IFIH1, IFIT1, IRF1, IRF8, ZBP1, CH25H | BST2/CD317 (S), ISG15 (I, secreted); MHC-I/HLA-A,B,C (S) often up. No unique surface epitope — define by ISG transcripts | Viral infections, sterile inflammation, neurodegeneration with type-I IFN | [10.1016/j.immuni.2018.11.004](https://doi.org/10.1016/j.immuni.2018.11.004), [10.1038/s41467-025-56124-1](https://doi.org/10.1038/s41467-025-56124-1), [10.1016/j.cell.2023.08.037](https://doi.org/10.1016/j.cell.2023.08.037) |
+
+### Antigen-Presenting (MHC-II / DC-like)  (2 sub-states)
+
+*MHC class II / antigen presentation. HLA-DR, CD74, CIITA; DC-like fraction adds LAMP3/CCR7.*
+
+| Sub-state | Up-markers (denoised, human) | Protein / surface | Context | References |
+|---|---|---|---|---|
+| MHC-II-high | HLA-DRB1, HLA-DRB5, CD74, CIITA, HLA-A, B2M, CD86, IL1B, TNF, HLA-DRA, CD40, NLRC5, TAP1, TAP2, PSMB8, PSMB9 | HLA-DR (S, via HLA-DRA/DRB), CD74 (S/I), CD86 (S), CD40 (S) | Antigen presentation; increased in EAE, MS models, and aging | [10.1016/j.celrep.2017.09.039](https://doi.org/10.1016/j.celrep.2017.09.039), [10.1016/j.immuni.2018.01.011](https://doi.org/10.1016/j.immuni.2018.01.011), [10.1038/s41467-025-56124-1](https://doi.org/10.1038/s41467-025-56124-1) |
+| Antigen-presenting / dendritic-like microglia (HLA-high II) ★ | HLA-DRA, HLA-DRB1, HLA-DPA1, CD74, CIITA, HLA-DQA1, CD83, LAMP3, CCR7, FLT3, ZBTB46 | HLA-DR (S), CD74 (S), CD86 (S); LAMP3/DC-LAMP (I) and CCR7 (S) in the cDC-like fraction | Antigen presentation in MS, AD, aging; overlaps MHC-II-high but extends to a dendritic-cell-like CNS-myeloid program | [10.1038/s41467-025-56124-1](https://doi.org/10.1038/s41467-025-56124-1), [10.1016/j.immuni.2018.01.011](https://doi.org/10.1016/j.immuni.2018.01.011) |
+
+### Inflammatory / Monocyte-derived  (2 sub-states)
+
+*Cytokine-releasing and monocyte-derived (DIM) cells. DIM is SALL1-neg/CCR2+ (monocyte origin), distinct from microglial DAM.*
+
+| Sub-state | Up-markers (denoised, human) | Protein / surface | Context | References |
+|---|---|---|---|---|
+| Cytokine / Chemokine-enriched (CRM) ★ | CCL2, CCL3, CCL4, CXCL8, IL1B, TNF, NFKBIA, NFKB1, CCL3L1, CCL4L2 | No unique surface marker; CD83 (S) and CD14 (S) often up; define by cytokine secretion (IL-1β, TNF by intracellular flow/ELISA) | Acute/chronic inflammation across AD, MS, ALS; NF-κB–driven cytokine program; partly overlaps DIM | [10.1016/j.cell.2023.08.037](https://doi.org/10.1016/j.cell.2023.08.037), [10.1038/s41467-025-56124-1](https://doi.org/10.1038/s41467-025-56124-1), [10.1038/s41586-021-03892-7](https://doi.org/10.1038/s41586-021-03892-7) |
+| Disease-Inflammatory Macrophages (DIMs) | SLC2A3, CD83, CCL3, CH25H, NAMPT, SRGN, IRAK2, HIF1A, RGS1, MCL1 | CD44 (S), CD83 (S), CCR2 (S, monocyte origin); SALL1-negative (distinguishes from yolk-sac microglia) | BBB disruption, traumatic injury, experimental autoimmune encephalomyelitis | [10.1016/j.immuni.2022.07.004](https://doi.org/10.1016/j.immuni.2022.07.004), [10.1038/s41467-025-56124-1](https://doi.org/10.1038/s41467-025-56124-1) |
+
+### Proliferative  (1 sub-state)
+
+*Cell-cycle microglia. Ki-67/TOP2A (intracellular).*
+
+| Sub-state | Up-markers (denoised, human) | Protein / surface | Context | References |
+|---|---|---|---|---|
+| Proliferating / Cycling | MKI67, TOP2A, CENPE, MCM5, BIRC5, CDK1, CCNB2, PCNA, AURKB, CENPF, PLK1, CDCA8, CDCA3, CDC20, CCNA2, CCNB1 | MKI67 (I, Ki-67 by IHC/flow), TOP2A (I); no unique surface marker — identify by cell-cycle proteins | Injury response, development, repopulation after depletion | [10.1016/j.immuni.2018.11.004](https://doi.org/10.1016/j.immuni.2018.11.004), [10.1038/s41467-025-56124-1](https://doi.org/10.1038/s41467-025-56124-1) |
+
+### Border-Associated (BAM / CAM)  (1 sub-state)
+
+*CNS-border macrophages (perivascular/meningeal/choroid). CD163/CD206/LYVE1 — NOT parenchymal microglia.*
+
+| Sub-state | Up-markers (denoised, human) | Protein / surface | Context | References |
+|---|---|---|---|---|
+| Border-Associated Macrophages (BAMs) | F13A1, CD163, MRC1, MS4A7, LYVE1, FOLR2, STAB1, PF4, CBR1, CD209, CD163L1, CLEC10A | CD163 (S), MRC1/CD206 (S), LYVE1 (S), CD209 (S), F13A1, FOLR2 (S) | Meninges, choroid plexus, perivascular spaces; CNS-immune interface | [10.1016/j.immuni.2018.01.011](https://doi.org/10.1016/j.immuni.2018.01.011), [10.1016/j.cell.2020.03.021](https://doi.org/10.1016/j.cell.2020.03.021) |
+
+### Developmental  (1 sub-state)
+
+*Embryonic/early-postnatal microglia (developmental context).*
+
+| Sub-state | Up-markers (denoised, human) | Protein / surface | Context | References |
+|---|---|---|---|---|
+| Embryonic / Early-postnatal Microglia | SPI1, CX3CR1, FABP5, MCM5, CCND1, DAB2, MRC1, MS4A7, FN1, CSF1R, CD4, RUNX1, F13A1 | CX3CR1 (S), CSF1R (S), MRC1/CD206 (S, early); SPI1/PU.1 (I, nuclear TF) | Embryonic and early postnatal brain development (E14.5-P4) | [10.1016/j.immuni.2018.11.004](https://doi.org/10.1016/j.immuni.2018.11.004) |
+
+### QC / Artifact-prone (use with caution)  (3 sub-states)
+
+*States frequently attributable to ambient RNA or ex-vivo dissociation (ribosomal, immediate-early, heat-shock). Retained so users RECOGNIZE and EXCLUDE them — not recommended as biological annotations.*
+
+| Sub-state | Up-markers (denoised, human) | Protein / surface | Context | References |
+|---|---|---|---|---|
+| Ribosomal DAM 1 | SYT1, PCDH9, LSAMP, CADM2, CALM1, KCNIP4, PEBP1, RBFOX1, CNTNAP2, RPL39, DYNLL1, NDUFA4, MT-ATP6, RPS27, DLG2, RTN3, MT-ND1, ATP5F1E, RPL18A, RPS18 | No specific validated surface marker (signature dominated by ribosomal/mito + neuronal ambient genes; likely low-quality/ambient cluster) | Associated with increased translational activity; found in neurodegenerative contexts | [10.1038/s41467-025-56124-1](https://doi.org/10.1038/s41467-025-56124-1), [10.1016/j.cell.2023.08.037](https://doi.org/10.1016/j.cell.2023.08.037), [10.1038/s41593-022-01022-8](https://doi.org/10.1038/s41593-022-01022-8) |
+| Ribosomal DAM 2 | PLEKHA7, MECOM, OOEP, ATP5F1E, FTH1, BAIAP2L1, PLEKHA6, BDNF-AS, FTL, NACA, SLC27A4, APOO, SLC47A1, ZNF90, TXNRD1, XPO5, RPL19, TMSB10, UBA52, TOMM7 | No specific validated surface marker (ferritin FTL/FTH1-high; iron handling); validate by ferritin IHC if used | Similar to Ribo.DAM1 but with distinct ribosomal gene expression pattern | [10.1038/s41467-025-56124-1](https://doi.org/10.1038/s41467-025-56124-1), [10.1016/j.cell.2023.08.037](https://doi.org/10.1016/j.cell.2023.08.037), [10.1038/s41593-022-01022-8](https://doi.org/10.1038/s41593-022-01022-8) |
+| Stress / heat-shock response microglia (HSP+) ★ | HSPA1A, HSPA1B, HSPB1, DNAJB1, FOS, JUN, JUNB, EGR1, HSPH1, BAG3, FOSB, ATF3 | No surface marker; HSP70 (I) by IHC/flow if validating. CAUTION: largely an ex-vivo dissociation/stress artifact | Reactive stress signature; substantially attributable to tissue dissociation/processing — interpret with care | [10.1038/s41593-022-01022-8](https://doi.org/10.1038/s41593-022-01022-8), [10.1016/j.neuron.2022.10.020](https://doi.org/10.1016/j.neuron.2022.10.020) |
+
+## Denoising
+
+Immediate-early (FOS, JUN, EGR1…) and heat-shock (HSPA1A/B, DNAJB1…) genes are removed from the `_denoised` gene sets because they fire artifactually during tissue dissociation (van den Brink 2017; Marsh 2022). The crossed-out genes on the site show what was removed. The 'Stress / heat-shock' state is **entirely** these genes and is therefore flagged as a QC artifact, not a biological state. Full blocklist: [`data/microglia_signatures_denoised.json`](data/microglia_signatures_denoised.json).
+
+## Files
+
+- [`index.html`](index.html) — collapsible, searchable site (umbrella → sub-states)
+- [`ADVERSARIAL_REVIEW.md`](ADVERSARIAL_REVIEW.md) — validation against annotated ALS data
+- [`data/microglia_subtypes_hierarchical.csv`](data/microglia_subtypes_hierarchical.csv) / `.json` — hierarchical table
+- [`data/microglia_signatures_denoised.json`](data/microglia_signatures_denoised.json) — denoised signatures + blocklist for scoring
+- [`data/microglia_subtypes_updated.csv`](data/microglia_subtypes_updated.csv) — flat table (all columns)
+- [`assets/`](assets) — heatmaps
+
+## Caveats & citation
+
+Validated as a **reference**, not a discrete classifier; performs well for separated states (homeostatic, ribosomal/QC, DIM) and groups continuum states honestly. Marker calls — especially the protein column and ortholog conversions — are literature-informed curation; cite the primary DOIs in the table and the [original repository](https://github.com/CompCy-lab/microglia-aging-clock). Code: MIT (`LICENSE`).
