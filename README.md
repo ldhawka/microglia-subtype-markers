@@ -38,7 +38,7 @@ Validation against annotated microglia in three ALS datasets showed the disease-
 | **Proliferative** | 1 | Cell-cycle microglia. Ki-67/TOP2A (intracellular). |
 | **Border-Associated (BAM / CAM)** | 1 | CNS-border macrophages (perivascular/meningeal/choroid). CD163/CD206/LYVE1 — NOT parenchymal microglia. |
 | **Developmental** | 1 | Embryonic/early-postnatal microglia (developmental context). |
-| **QC / Artifact-prone (use with caution)** | 2 | States frequently attributable to ambient RNA or ex-vivo dissociation (ribosomal, immediate-early, heat-shock). Retained |
+| **Ribosomal / translation-high (interpret with caution)** | 2 | Ribosome-biogenesis / translation-high microglia. Defined as two separate clusters in HuMicA (Ribo.DAM1, Ribo.DAM2), bot |
 
 ## Full hierarchical table
 
@@ -121,18 +121,18 @@ Each sub-state lists **human** then **mouse** up/down markers. Protein, context 
 |---|---|---|---|---|---|---|---|
 | Embryonic / Early-postnatal Microglia | SPI1, CX3CR1, FABP5, MCM5, CCND1, DAB2, MRC1, MS4A7, FN1, CSF1R, CD4, RUNX1, F13A1 | P2RY12, TMEM119, SALL1 | Spi1, Cx3cr1, Fabp5, Mcm5, Ccnd1, Dab2, Mrc1, Ms4a7, Fn1, Csf1r, Cd4, Runx1, F13a1 | P2ry12, Tmem119, Sall1 | CX3CR1 (S), CSF1R (S), MRC1/CD206 (S, early); SPI1/PU.1 (I, nuclear TF) | Embryonic and early postnatal brain development (E14.5-P4) | [Hammond et al. 2019](https://doi.org/10.1016/j.immuni.2018.11.004) |
 
-### QC / Artifact-prone (use with caution)  (2 sub-states)
+### Ribosomal / translation-high (interpret with caution)  (2 sub-states)
 
-*States frequently attributable to ambient RNA or ex-vivo dissociation (ribosomal, immediate-early, heat-shock). Retained so users RECOGNIZE and EXCLUDE them — not recommended as biological annotations.*
+*Ribosome-biogenesis / translation-high microglia. Defined as two separate clusters in HuMicA (Ribo.DAM1, Ribo.DAM2), both mapping to Sun 2023's MG3 'Ribosome Biogenesis' state. HuMicA retained them after filtering nuclei with >5% ribosomal-RNA content, so they are not simply high-ribosomal contamination — but ribosomal/translation signatures can also reflect ambient RNA or low-QC nuclei (Marsh 2022). Interpret with caution: verify QC (mito %, ambient fraction, doublets) before annotating, and treat their biological role as not yet fully established.*
 
 | Sub-state | Human ↑ | Human ↓ | Mouse ↑ | Mouse ↓ | Protein / surface | Context | References |
 |---|---|---|---|---|---|---|---|
-| Ribosomal DAM 1 | SYT1, PCDH9, LSAMP, CADM2, CALM1, KCNIP4, PEBP1, RBFOX1, CNTNAP2, RPL39, DYNLL1, COXFA4, MT-ATP6, RPS27, DLG2, RTN3, MT-ND1, ATP5F1E, RPL18A, RPS18 | P2RY12, TMEM119, CX3CR1 | Syt1, Pcdh9, Lsamp, Cadm2, Calm1, Kcnip4, Pebp1, Rbfox1, Cntnap2, Rpl39, Dynll1, Ndufa4, mt-Atp6, Rps27, Dlg2, Rtn3, mt-Nd1, Atp5f1e, Rpl18a, Rps18 | P2ry12, Tmem119, Cx3cr1 | No specific validated surface marker (signature dominated by ribosomal/mito + neuronal ambient genes; likely low-quality/ambient cluster) | Associated with increased translational activity; found in neurodegenerative contexts | [Martins-Ferreira et al. 2025](https://doi.org/10.1038/s41467-025-56124-1); [Sun et al. 2023](https://doi.org/10.1016/j.cell.2023.08.037); [Marsh et al. 2022](https://doi.org/10.1038/s41593-022-01022-8) |
-| Ribosomal DAM 2 | PLEKHA7, MECOM, OOEP, ATP5F1E, FTH1, BAIAP2L1, PLEKHA6, BDNF-AS, FTL, NACA, SLC27A4, APOO, SLC47A1, ZNF90, TXNRD1, XPO5, RPL19, TMSB10, UBA52, TOMM7 | P2RY12, TMEM119, CX3CR1 | Plekha7, Mecom, Ooep, Atp5f1e, Fth1, Baiap2l1, Plekha6, Ftl, Naca, Slc27a4, Apoo, Slc47a1, Txnrd1, Xpo5, Rpl19, Tmsb10, Uba52, Tomm7 | P2ry12, Tmem119, Cx3cr1 | No specific validated surface marker (ferritin FTL/FTH1-high; iron handling); validate by ferritin IHC if used | Similar to Ribo.DAM1 but with distinct ribosomal gene expression pattern | [Martins-Ferreira et al. 2025](https://doi.org/10.1038/s41467-025-56124-1); [Sun et al. 2023](https://doi.org/10.1016/j.cell.2023.08.037); [Marsh et al. 2022](https://doi.org/10.1038/s41593-022-01022-8) |
+| Ribosomal DAM 1 | SYT1, PCDH9, LSAMP, CADM2, CALM1, KCNIP4, PEBP1, RBFOX1, CNTNAP2, RPL39, DYNLL1, COXFA4, MT-ATP6, RPS27, DLG2, RTN3, MT-ND1, ATP5F1E, RPL18A, RPS18 | P2RY12, TMEM119, CX3CR1 | Syt1, Pcdh9, Lsamp, Cadm2, Calm1, Kcnip4, Pebp1, Rbfox1, Cntnap2, Rpl39, Dynll1, Ndufa4, mt-Atp6, Rps27, Dlg2, Rtn3, mt-Nd1, Atp5f1e, Rpl18a, Rps18 | P2ry12, Tmem119, Cx3cr1 | No specific validated surface marker (signature dominated by ribosomal/mito + neuronal ambient genes; likely low-quality/ambient cluster) | Ribosome-biogenesis / translation-high state (HuMicA cluster 3; Sun MG3). Headed by SYT1/PCDH9; found in neurodegenerative contexts. Possibly a distinct population, but ribosomal signatures also flag potential ambient-RNA / low-QC nuclei — confirm QC before use. | [Martins-Ferreira et al. 2025](https://doi.org/10.1038/s41467-025-56124-1); [Sun et al. 2023](https://doi.org/10.1016/j.cell.2023.08.037); [Marsh et al. 2022](https://doi.org/10.1038/s41593-022-01022-8) |
+| Ribosomal DAM 2 | PLEKHA7, MECOM, OOEP, ATP5F1E, FTH1, BAIAP2L1, PLEKHA6, BDNF-AS, FTL, NACA, SLC27A4, APOO, SLC47A1, ZNF90, TXNRD1, XPO5, RPL19, TMSB10, UBA52, TOMM7 | P2RY12, TMEM119, CX3CR1 | Plekha7, Mecom, Ooep, Atp5f1e, Fth1, Baiap2l1, Plekha6, Ftl, Naca, Slc27a4, Apoo, Slc47a1, Txnrd1, Xpo5, Rpl19, Tmsb10, Uba52, Tomm7 | P2ry12, Tmem119, Cx3cr1 | No specific validated surface marker (ferritin FTL/FTH1-high; iron handling); validate by ferritin IHC if used | Second ribosome-biogenesis / translation-high state (HuMicA cluster 5; Sun MG3) with a distinct signature including ferritin (FTL/FTH1). HuMicA speculates Ribo.DAM1 and Ribo.DAM2 may be two biologically distinct populations, but notes their role requires further investigation; confirm QC before use. | [Martins-Ferreira et al. 2025](https://doi.org/10.1038/s41467-025-56124-1); [Sun et al. 2023](https://doi.org/10.1016/j.cell.2023.08.037); [Marsh et al. 2022](https://doi.org/10.1038/s41593-022-01022-8) |
 
 ## Denoising — dissociation artifacts
 
-Immediate-early (FOS, JUN, EGR1…) and heat-shock (HSPA1A/B, DNAJB1…) genes are removed from the `_denoised` gene sets because they are induced artifactually during tissue dissociation — first characterized by [van den Brink et al. 2017](https://doi.org/10.1038/nmeth.4437) and shown to confound microglial state calls by [Marsh et al. 2022](https://doi.org/10.1038/s41593-022-01022-8). A 'Stress / heat-shock' cluster composed *entirely* of these genes was identified during curation and **excluded** as a likely technical artifact. Full blocklist: [`data/microglia_signatures_denoised.json`](data/microglia_signatures_denoised.json).
+Immediate-early (FOS, JUN, EGR1…) and heat-shock (HSPA1A/B, DNAJB1…) genes are removed from the `_denoised` gene sets because they are induced artifactually during tissue dissociation — first characterized by [van den Brink et al. 2017](https://doi.org/10.1038/nmeth.4437) and shown to confound microglial state calls by [Marsh et al. 2022](https://doi.org/10.1038/s41593-022-01022-8). A 'Stress / heat-shock' cluster composed *entirely* of these genes was identified during curation and **excluded** as a likely technical artifact. The **ribosomal / translation-high** states (Ribo.DAM1/2) are kept but flagged *interpret with caution*: HuMicA ([Martins-Ferreira et al. 2025](https://doi.org/10.1038/s41467-025-56124-1)) defines them as two distinct clusters (both mapping to Sun 2023 MG3, *Ribosome Biogenesis*) retained after >5% ribosomal-RNA filtering, so they are not simply contamination — but ribosomal signatures can still reflect ambient RNA / low-QC nuclei. Full blocklist: [`data/microglia_signatures_denoised.json`](data/microglia_signatures_denoised.json).
 
 ## Files
 
@@ -142,7 +142,7 @@ Immediate-early (FOS, JUN, EGR1…) and heat-shock (HSPA1A/B, DNAJB1…) genes a
 - [`data/microglia_signatures_denoised.json`](data/microglia_signatures_denoised.json) — denoised signatures + blocklist
 - [`data/microglia_subtypes_updated.csv`](data/microglia_subtypes_updated.csv) — flat table
 - [`scoring/`](scoring) — `microglia_scorer.py` auto-annotation tool + usage
-- [`assets/marker_map.png`](assets/marker_map.png) — sub-state × marker map
+- [`assets/marker_map.png`](assets/marker_map.png) / [`marker_map_mouse.png`](assets/marker_map_mouse.png) — sub-state × marker maps
 
 ## Caveats & citation
 

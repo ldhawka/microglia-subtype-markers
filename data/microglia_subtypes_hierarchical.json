@@ -392,8 +392,8 @@
   ]
  },
  {
-  "umbrella": "QC / Artifact-prone (use with caution)",
-  "umbrella_description": "States frequently attributable to ambient RNA or ex-vivo dissociation (ribosomal, immediate-early, heat-shock). Retained so users RECOGNIZE and EXCLUDE them \u2014 not recommended as biological annotations.",
+  "umbrella": "Ribosomal / translation-high (interpret with caution)",
+  "umbrella_description": "Ribosome-biogenesis / translation-high microglia. Defined as two separate clusters in HuMicA (Ribo.DAM1, Ribo.DAM2), both mapping to Sun 2023's MG3 'Ribosome Biogenesis' state. HuMicA retained them after filtering nuclei with >5% ribosomal-RNA content, so they are not simply high-ribosomal contamination \u2014 but ribosomal/translation signatures can also reflect ambient RNA or low-QC nuclei (Marsh 2022). Interpret with caution: verify QC (mito %, ambient fraction, doublets) before annotating, and treat their biological role as not yet fully established.",
   "n_sub_subtypes": 2,
   "sub_subtypes": [
    {
@@ -405,10 +405,10 @@
     "dissociation_genes_removed": "",
     "downregulated_genes_human": "P2RY12, TMEM119, CX3CR1",
     "protein_surface_markers": "No specific validated surface marker (signature dominated by ribosomal/mito + neuronal ambient genes; likely low-quality/ambient cluster)",
-    "context": "Associated with increased translational activity; found in neurodegenerative contexts",
+    "context": "Ribosome-biogenesis / translation-high state (HuMicA cluster 3; Sun MG3). Headed by SYT1/PCDH9; found in neurodegenerative contexts. Possibly a distinct population, but ribosomal signatures also flag potential ambient-RNA / low-QC nuclei \u2014 confirm QC before use.",
     "references": "Martins-Ferreira et al. (2025), Nat Commun (HuMicA); Sun et al. (2023), Cell; Marsh et al. (2022), Nat Neurosci",
     "reference_dois": "10.1038/s41467-025-56124-1; 10.1016/j.cell.2023.08.037; 10.1038/s41593-022-01022-8",
-    "changes_vs_baseline": "Refreshed to human symbols; added explicit Marsh 2022 caveat that ribosomal+neuronal-gene clusters frequently reflect ambient RNA / low-QC nuclei rather than a bona fide biological state.",
+    "changes_vs_baseline": "Reframed from 'artifact, exclude' to 'interpret with caution': HuMicA defines this as a distinct ribosomal cluster (Ribo.DAM1) retained after >5% ribosomal-RNA filtering and maps it to Sun 2023 MG3 (Ribosome Biogenesis), so it is not simply contamination; Marsh 2022 QC caveat retained.",
     "upregulated_genes_mouse": "Syt1, Pcdh9, Lsamp, Cadm2, Calm1, Kcnip4, Pebp1, Rbfox1, Cntnap2, Rpl39, Dynll1, Ndufa4, mt-Atp6, Rps27, Dlg2, Rtn3, mt-Nd1, Atp5f1e, Rpl18a, Rps18",
     "downregulated_genes_mouse": "P2ry12, Tmem119, Cx3cr1"
    },
@@ -421,10 +421,10 @@
     "dissociation_genes_removed": "",
     "downregulated_genes_human": "P2RY12, TMEM119, CX3CR1",
     "protein_surface_markers": "No specific validated surface marker (ferritin FTL/FTH1-high; iron handling); validate by ferritin IHC if used",
-    "context": "Similar to Ribo.DAM1 but with distinct ribosomal gene expression pattern",
+    "context": "Second ribosome-biogenesis / translation-high state (HuMicA cluster 5; Sun MG3) with a distinct signature including ferritin (FTL/FTH1). HuMicA speculates Ribo.DAM1 and Ribo.DAM2 may be two biologically distinct populations, but notes their role requires further investigation; confirm QC before use.",
     "references": "Martins-Ferreira et al. (2025), Nat Commun (HuMicA); Sun et al. (2023), Cell; Marsh et al. (2022), Nat Neurosci",
     "reference_dois": "10.1038/s41467-025-56124-1; 10.1016/j.cell.2023.08.037; 10.1038/s41593-022-01022-8",
-    "changes_vs_baseline": "Refreshed to human symbols; noted ferritin (FTL/FTH1) component and same ambient-RNA QC caveat as Ribo.DAM1.",
+    "changes_vs_baseline": "Reframed from 'artifact, exclude' to 'interpret with caution': HuMicA reports Ribo.DAM2 as a separate cluster from Ribo.DAM1 (each with distinct traits, both mapping to Sun MG3) and explicitly speculates they are two biologically distinct populations 'requiring further investigation'; ferritin (FTL/FTH1) component noted; Marsh 2022 QC caveat retained.",
     "upregulated_genes_mouse": "Plekha7, Mecom, Ooep, Atp5f1e, Fth1, Baiap2l1, Plekha6, Ftl, Naca, Slc27a4, Apoo, Slc47a1, Txnrd1, Xpo5, Rpl19, Tmsb10, Uba52, Tomm7",
     "downregulated_genes_mouse": "P2ry12, Tmem119, Cx3cr1"
    }
