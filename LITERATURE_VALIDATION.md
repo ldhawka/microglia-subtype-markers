@@ -31,14 +31,14 @@ the long tails are not all individually sourced.
 
 | My umbrella | Sun 2023 state | Verdict |
 |---|---|---|
-| Homeostatic / Surveillant | MG0 homeostatic | ✓ direct |
-| Disease-Associated (DAM continuum) | MG1/MG4 lipid-processing + inflammatory I–III | ✓ continuum matches |
-| Inflammatory / Monocyte-derived | MG10 inflammatory | ✓ |
-| Interferon-Responsive | MG11 antiviral | ✓ direct |
-| Proliferative | MG12 cycling | ✓ direct |
-| Border-Associated | (excluded as non-microglia) | ✓ correctly separated |
+| Homeostatic / Surveillant | MG0 homeostatic | Yes — direct |
+| Disease-Associated (DAM continuum) | MG1/MG4 lipid-processing + inflammatory I–III | Yes — continuum matches |
+| Inflammatory / Monocyte-derived | MG10 inflammatory | Yes |
+| Interferon-Responsive | MG11 antiviral | Yes — direct |
+| Proliferative | MG12 cycling | Yes — direct |
+| Border-Associated | (excluded as non-microglia) | Yes — correctly separated |
 | Antigen-Presenting (MHC-II/DC-like) | folded into inflammatory | ~ I split finer than Sun |
-| QC / Artifact-prone | MG3 ribosome-biogenesis, MG6 stress | ⚠ see correction |
+| QC / Artifact-prone | MG3 ribosome-biogenesis, MG6 stress | Caution — see correction |
 
 **Corrections this analysis forces:**
 1. **The "artifact" label is too strong.** Sun 2023 reports ribosomal (MG3) and stress (MG6) as *bona fide*

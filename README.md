@@ -4,9 +4,9 @@ A refreshed, **hierarchically organized** reference of microglia / CNS-myeloid m
 
 > Independent update of the *Comprehensive Characterization of Major Microglia Subtypes* table from [CompCy-lab/microglia-aging-clock](https://github.com/CompCy-lab/microglia-aging-clock). Disease-associated states form a **continuum**, so they are grouped under one umbrella with sub-states beneath rather than listed as independent clusters.
 
-### 🌐 Live site: **https://ldhawka.github.io/microglia-subtype-markers/**
+### Live site: **https://ldhawka.github.io/microglia-subtype-markers/**
 
-🔎 **Searchable, collapsible site:** **[open the live page](https://ldhawka.github.io/microglia-subtype-markers/)** (clicking `index.html` in this repo shows the source, not the rendered page)  ·  🧪 **Validation:** [LITERATURE_VALIDATION.md](./LITERATURE_VALIDATION.md)
+**Searchable, collapsible site:** **[open the live page](https://ldhawka.github.io/microglia-subtype-markers/)** (clicking `index.html` in this repo shows the source, not the rendered page)  ·  **Validation:** [LITERATURE_VALIDATION.md](./LITERATURE_VALIDATION.md)
 
 **★ = newly added sub-state** in this update (not in the original 2024/2025 list). 5 sub-states are new: Human MG-AD/GPNMB+, ALS/FTLD cortical, MS-rim (MIMS-iron), Antigen-presenting/DC-like, and Cytokine/CRM.
 
